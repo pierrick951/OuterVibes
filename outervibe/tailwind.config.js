@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'carousel-one': "url('./assets/kyoto.jpg')",
+        'carousel-two': "url('./assets/Montreal2.jpg')",
+        'carousel-three': "url('./assets/montreal3.jpg')",
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
