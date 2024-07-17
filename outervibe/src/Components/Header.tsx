@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import HeroSection from "./HeroSection";
-import { SocialeType } from "../type";
+import { SocialeType, NavType } from "../type";
 import {CgMenuGridO, FaPinterest, IoLogoInstagram, LuLinkedin, IoMdClose} from '../Icone-index'
 
 
@@ -13,7 +13,13 @@ function Header() {
 
 
   const title: string = "Outer Vibes*";
-  const tabs: string[] = ["A Propos", "fonctionnement", "Formule", "Contact"];
+  const tabs:NavType = [
+
+    {id:nanoid(), text:"A Propos", link:'#about'},
+    {id:nanoid(), text:"Fonctionnement", link:'#'},
+    {id:nanoid(), text:"Formule", link:'#'},
+    {id:nanoid(), text:"Contact", link:'#'},
+   ];
 
   const socialLink: SocialeType = [
     {
@@ -44,9 +50,9 @@ function Header() {
           </h1>
         </div>
         <ul className="hidden md:flex font-semibold flex-row gap-5 justify-center text-zinc-900 capitalize text-mono">
-          {tabs.map((item) => (
-            <li key={item} className=" hover:text-zinc-700">
-              <a href="#">{item}</a>
+          {tabs.map(({id,text,link}) => (
+            <li key={id} className=" hover:text-zinc-700">
+              <a href={link}>{text}</a>
             </li>
           ))}
         </ul>
@@ -69,8 +75,8 @@ function Header() {
       {isOpen && (
         <ul className=" fixed w-full top-16 p-6  bg-zinc-900   flex flex-col gap-2 md:hidden capitalize z-50">
           {tabs.map((item) => (
-            <li key={item} className="text-gray-100 ">
-              <a href="#27272a">{item}</a>
+            <li key={item.id} className="text-gray-100 ">
+              <a href={item.link}>{item.text}</a>
             </li>
           ))}
           <div>

@@ -9,7 +9,11 @@ export type Slidersrc = {
   srcSlider: string;
 }[];
 
-
+export type NavType= {
+  id: string;
+  text: string;
+  link: string;
+}[]
 
 export type CardType = {
   id: string;

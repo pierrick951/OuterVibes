@@ -1,5 +1,6 @@
 import Header from "../Components/Header";
 import About from "../Components/About";
+import Fontionement from "../Components/Fontionement"
 import { Helmet } from "react-helmet";
 
 type Props = {};
@@ -16,6 +17,7 @@ function Home({}: Props) {
       <Header />
       <main>
         <About/>
+        <Fontionement/>
       </main>
     </div>
   );
