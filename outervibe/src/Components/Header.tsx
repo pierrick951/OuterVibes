@@ -11,6 +11,7 @@ import {CgMenuGridO, FaPinterest, IoLogoInstagram, LuLinkedin, IoMdClose} from '
 function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+
   const title: string = "Outer Vibes*";
   const tabs: string[] = ["A Propos", "fonctionnement", "Formule", "Contact"];
 
@@ -33,7 +34,9 @@ function Header() {
   ];
 
   return (
-    <header className="w-screen overflow-x-hidden">
+    <header
+
+    className="w-screen overflow-x-hidden">
       <nav className=" flex flex-row justify-between items-center p-5 xl:px-40 fixed w-full z-20 top-0 bg-gray-50">
         <div className="">
           <h1 className="  text-zinc-950 font-semibold text-lg xl:text-xl">
@@ -64,7 +67,7 @@ function Header() {
         </div>
       </nav>
       {isOpen && (
-        <ul className="absolute w-full top-16 p-6  bg-zinc-900   flex flex-col gap-2 md:hidden capitalize z-50">
+        <ul className=" fixed w-full top-16 p-6  bg-zinc-900   flex flex-col gap-2 md:hidden capitalize z-50">
           {tabs.map((item) => (
             <li key={item} className="text-gray-100 ">
               <a href="#27272a">{item}</a>
