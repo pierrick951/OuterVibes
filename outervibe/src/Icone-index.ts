@@ -7,3 +7,4 @@ export{ FaArrowDown } from "react-icons/fa";
 export { IoTimeOutline } from "react-icons/io5";
 export { MdOutlineTravelExplore } from "react-icons/md";
 export { BsPersonVcard } from "react-icons/bs";
+export { FaCheckCircle } from "react-icons/fa";

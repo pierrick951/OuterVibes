@@ -1,8 +1,11 @@
 import Header from "../Components/Header";
 import About from "../Components/About";
-import Fontionement from "../Components/Fontionement"
-import { Helmet } from "react-helmet";
+import Price from "../Components/Price";
+import Fontionement from "../Components/Fontionement";
+import Contact from "../Components/Contact";
 
+import { Helmet } from "react-helmet";
+import Footer from "../Components/Footer";
 type Props = {};
 function Home({}: Props) {
   return (
@@ -16,9 +19,14 @@ function Home({}: Props) {
       </Helmet>
       <Header />
       <main>
-        <About/>
+        <About />
         <Fontionement/>
+      <Price />
+      <Contact/>
       </main>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }
