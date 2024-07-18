@@ -31,3 +31,13 @@ export type cardPricesType = {
   price:number;
   tabs:string[];
 }[]
+
+
+export type contentFormType = {
+  id: string;
+  placeholder: string;
+  label: string;
+  type: string;
+  aria: string;
+  name: string;
+}[]

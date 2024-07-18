@@ -15,7 +15,7 @@ const aboutContent: string[] = [
   " je suis Gaëlle, passionnée de voyages. Forte de mes expériences, je suis spécialisée dans l'organisation de voyages sur mesure, vous offrant le meilleur pour votre aventure.",
   "Me contacter",
   "#contact",
-  "photo de Gaelle Boudassou, creatrice de outer vibes"
+  "photo de Gaelle Boudassou, Creatrice de outer vibes"
 ];
 
 const Tabs: CardType = [
@@ -37,7 +37,7 @@ const Tabs: CardType = [
 ];
 function About() {
   return (
-    <div className="px-5 lg:px-36 xl:px-40 w-full ">
+    <div className="px-5 lg:px-36 xl:px-40 w-full h-auto">
       <div className="flex flex-col text-center ">
         <div className="pb-3">
         <Title title={aboutContent[0]}/>
@@ -62,7 +62,7 @@ function About() {
           </div>
 
           <img
-            className="  w-full lg:w-auto h-[200px] object-cover rounded-2xl px-2"
+            className="  w-full lg:w-auto h-[200px] object-cover rounded-2xl px-2 py-2"
             src={Gaelle}
             alt={aboutContent[5]}
           />

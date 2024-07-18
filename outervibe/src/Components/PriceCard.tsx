@@ -9,13 +9,13 @@ type Props = {
 
 function PriceCard({ text, title, price, tabs }: Props) {
   return (
-    <div className="text-zinc-900 flex flex-col h-full">
+    <div className="flex flex-col h-full">
       <div className="w-full">
-        <h1 className="text-2xl font-semibold pb-4">{text}</h1>
+        <h1 className="text-2xl font-semibold pb-4 text-center">{text}</h1>
         <hr className="bb-zinc-700" />
       </div>
       <div>
-        <p className="py-4">{title}</p>
+        <p className="py-4 text-center">{title}</p>
       </div>
       <ul className="flex flex-col flex-grow">
         {tabs.map((tab, index) => (

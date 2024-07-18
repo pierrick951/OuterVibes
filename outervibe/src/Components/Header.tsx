@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { CgMenuGridO,FaPinterest, IoLogoInstagram, LuLinkedin, IoMdClose } from "../Icone-index";
+import {
+  CgMenuGridO,
+  FaPinterest,
+  IoLogoInstagram,
+  LuLinkedin,
+  IoMdClose,
+} from "../Icone-index";
 
 import HeroSection from "./HeroSection";
 import SocialLinks from "./SocialLinks";
@@ -7,24 +13,18 @@ import { NavType } from "../type";
 import { nanoid } from "nanoid";
 import { SocialeType } from "../type";
 
-
-
-
-
 function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-
   const title: string = "Outer Vibes*";
-  const tabs:NavType = [
+  const tabs: NavType = [
+    { id: nanoid(), text: "A Propos", link: "#about" },
+    { id: nanoid(), text: "Fonctionnement", link: "#" },
+    { id: nanoid(), text: "Formule", link: "#price" },
+    { id: nanoid(), text: "Contact", link: "#contact" },
+  ];
 
-    {id:nanoid(), text:"A Propos", link:'#about'},
-    {id:nanoid(), text:"Fonctionnement", link:'#'},
-    {id:nanoid(), text:"Formule", link:'#price'},
-    {id:nanoid(), text:"Contact", link:'#contact'},
-   ];
-
-  const linkButtonNav:string ="https://www.instagram.com/"
+  const linkButtonNav: string = "https://www.instagram.com/";
 
   const socialLink: SocialeType = [
     {
@@ -44,9 +44,7 @@ function Header() {
     },
   ];
   return (
-    <header
-
-    className="w-screen overflow-x-hidden">
+    <header className="w-screen overflow-x-hidden">
       <nav className=" flex flex-row justify-between items-center p-5 xl:px-40 fixed w-full z-20 top-0 bg-gray-50 ">
         <div className="">
           <h1 className="  text-zinc-950 font-semibold text-lg xl:text-xl">
@@ -54,7 +52,7 @@ function Header() {
           </h1>
         </div>
         <ul className="hidden md:flex font-semibold flex-row gap-5 justify-center text-zinc-900 capitalize text-mono ">
-          {tabs.map(({id,text,link}) => (
+          {tabs.map(({ id, text, link }) => (
             <li key={id} className=" hover:text-zinc-700">
               <a href={link}>{text}</a>
             </li>
@@ -62,8 +60,7 @@ function Header() {
         </ul>
         <div>
           <div>
-            <a href={linkButtonNav} 
-            className="p-2 rounded-xl hidden md:block">
+            <a href={linkButtonNav} className="p-2 rounded-xl hidden md:block">
               <IoLogoInstagram color="#1c1c1c" className="animate-bounce" />
             </a>
             <button onClick={() => setIsOpen(!isOpen)} className="md:hidden ">
@@ -86,14 +83,18 @@ function Header() {
           <div>
             <hr className="text-gray-100  py-2" />
             <div className="flex flex-row items-center justify-center gap-3">
-      {socialLink.map((item) => (
-        <SocialLinks key={item.id} element={item.element} link={item.link} />
-      ))}
-    </div>
+              {socialLink.map((item) => (
+                <SocialLinks
+                  key={item.id}
+                  element={item.element}
+                  link={item.link}
+                />
+              ))}
+            </div>
           </div>
         </ul>
       )}
-      <HeroSection/>
+      <HeroSection />
     </header>
   );
 }
