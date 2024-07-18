@@ -63,7 +63,6 @@ const textAreaContent: string[] = [
 ];
 
 function Contact() {
-
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     let hasError: boolean = false;
@@ -84,6 +83,7 @@ function Contact() {
         <div className="flex flex-col md:flex-row w-full justify-center lg:justify-around min-w-fit max-w-6xl gap-7 ">
           <div className="flex flex-col items-center justify-center w-full md:w-3/4 lg:w-1/2 ">
             <form
+              method="POST"
               onSubmit={handleSubmit}
               action={formAction}
               className="flex flex-col gap-4 w-full lg:max-w-sm"
