@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
-import { FormEvent } from "react";
 import { Toaster, toast } from "sonner";
+import { useForm } from "@formspree/react";
 import Title from "../Components/Title";
 import montreal from "../assets/Montreal2.jpg";
 import SocialLinks from "./SocialLinks";
@@ -8,7 +8,6 @@ import { SocialeType, contentFormType } from "../type";
 
 import { FaPinterest, IoLogoInstagram, LuLinkedin } from "../Icone-index";
 
-const formAction: string = "https://formspree.io/f/mdknkrjp";
 const buttonSubmit: string = "Envoyer";
 const titleForm: string = "Contact";
 
@@ -18,7 +17,7 @@ const contentForm: contentFormType = [
     placeholder: "Entrer votre prénom",
     label: "Prenom",
     type: "text",
-    aria: "vote prenom",
+    aria: "votre prénom",
     name: "prenom",
   },
   {
@@ -38,6 +37,7 @@ const contentForm: contentFormType = [
     name: "email",
   },
 ];
+
 const socialLinkContact: SocialeType = [
   {
     id: nanoid(),
@@ -63,13 +63,16 @@ const textAreaContent: string[] = [
 ];
 
 function Contact() {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    let hasError: boolean = false;
-    if (!hasError) {
-      toast.success("Formulaire soumis avec succes ! ");
-    }
+  const [state, handleSubmit] = useForm("mdknkrjp");
+
+  const handleClick: (event: any) => void = (event) => {
+    handleSubmit(event).then(() => {
+      if (state.succeeded) {
+        toast.success("Formulaire soumis avec succès !");
+      }
+    });
   };
+
   return (
     <div
       id="contact"
@@ -84,8 +87,7 @@ function Contact() {
           <div className="flex flex-col items-center justify-center w-full md:w-3/4 lg:w-1/2 ">
             <form
               method="POST"
-              onSubmit={handleSubmit}
-              action={formAction}
+              onSubmit={handleClick}
               className="flex flex-col gap-4 w-full lg:max-w-sm"
             >
               {contentForm.map((item) => (
@@ -114,6 +116,7 @@ function Contact() {
               </label>
               <textarea
                 required
+               name={textAreaContent[2]}
                 id={textAreaContent[2]}
                 placeholder={textAreaContent[0]}
                 aria-label={textAreaContent[1]}
@@ -124,14 +127,15 @@ function Contact() {
                 <Toaster richColors />
                 <button
                   type="submit"
-                  className="bg-red-500 py-2 px-5 hover:bg-red-300 rounded-xl text-white font-bold "
+                  disabled={state.submitting}
+                  className="bg-red-500 py-2 px-5 hover:bg-red-300 rounded-xl text-white font-bold"
                 >
                   {buttonSubmit}
                 </button>
               </div>
             </form>
           </div>
-          <div className="hidden xl:flex w-1/2 py-2  flex-col justify-between">
+          <div className="hidden xl:flex w-1/2 py-2 flex-col justify-between">
             <div>
               <img
                 src={montreal}
@@ -139,7 +143,7 @@ function Contact() {
                 className="rounded-2xl w-full min-h-full object-cover"
               />
             </div>
-            <div className=" flex flex-row justify-center gap-5 ">
+            <div className="flex flex-row justify-center gap-5 ">
               {socialLinkContact.map((item) => (
                 <SocialLinks
                   key={item.id}
