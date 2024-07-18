@@ -40,12 +40,12 @@ function Price() {
   return (
     <div 
     id="price"
-    className=" px-5 lg:px-36 xl:px-40  py-10 ">
-      <div className="flex flex-col lg:flex-row gap-5 items-center justify-center lg:gap-10    rounded-xl shadow-xl p-5">
+    className=" px-5 lg:px-36 xl:px-40  py-10 bg-zinc-800 ">
+      <div className="flex flex-col lg:flex-row gap-5 items-center justify-center lg:gap-10    rounded-xl shadow-xl p-5 ">
         {cardPrices.map((item) => (
           <div
             key={item.id}
-            className="bg-gradient-to-br from-gray-50 to-gray-200 p-2 rounded-2xl h-96 w-full sm:w-80 lg:w-96 shadow-2xl cursor-pointer  hover:animate-pulse"
+            className=" p-2 rounded-2xl h-96 w-full sm:w-80 lg:w-96 shadow-2xl cursor-pointer  hover:animate-pulse bg-white"
           >
             <PriceCard
               key={item.id}

@@ -26,7 +26,7 @@ function PriceCard({ text, title, price, tabs }: Props) {
         ))}
       </ul>
       <div className="w-full text-center py-2 mt-auto">
-        <p className="text-xl font-bold">{price}$</p>
+        <p className="text-xl font-bold font-mono">{price}$</p>
       </div>
     </div>
   );
