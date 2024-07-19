@@ -1,10 +1,12 @@
+import { Helmet} from 'react-helmet-async';
+
+
 import Header from "../Components/Header";
 import About from "../Components/About";
 import Price from "../Components/Price";
 import Fontionement from "../Components/Fontionement";
 import Contact from "../Components/Contact";
 
-import { Helmet } from "react-helmet";
 import Footer from "../Components/Footer";
 type Props = {};
 function Home({}: Props) {

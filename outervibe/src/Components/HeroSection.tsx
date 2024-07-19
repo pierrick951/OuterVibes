@@ -1,11 +1,10 @@
 import { nanoid } from "nanoid";
 import { Slidersrc } from "../type";
 import { FaArrowDown } from "../Icone-index";
-import { Helmet } from "react-helmet";
 
 function HeroSection() {
   const imgSlider: Slidersrc = [{ id: nanoid(), srcSlider: "carousel-one" }];
-  const titlePage: string = "Votre aventure commence ici";
+  
   const TextHeroSection: string[] = [
     "Découvrir",
     "Votre aventure sur mesure, planifiée à la perfection",
@@ -15,13 +14,7 @@ function HeroSection() {
 
   return (
     <div className="px-5 lg:px-36 xl:px-40  w-full pt-24 ">
-      <Helmet>
-        <title>{titlePage}</title>
-        <meta
-          name="description"
-          content="Découvrez votre aventure sur mesure, planifiée à la perfection."
-        />
-      </Helmet>
+  
 
       <div className="h-auto pb-16 ">
         {imgSlider.map((item) => (

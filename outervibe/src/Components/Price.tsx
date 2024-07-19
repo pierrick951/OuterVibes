@@ -6,7 +6,7 @@ const cardPrices: cardPricesType = [
   {
     id: nanoid(),
     text: "Eco",
-    title: "reserver vous une pause a moindre coup",
+    title: "Reserver vous une pause a moindre coup",
     price: 50,
     tabs: [
       "Evasion Rapide",

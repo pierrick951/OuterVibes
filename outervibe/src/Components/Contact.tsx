@@ -61,7 +61,7 @@ const textAreaContent: string[] = [
   "Votre texte",
   "message",
 ];
-
+const ariaForm:string = ' Formulaire'
 function Contact() {
   const [state, handleSubmit] = useForm("mdknkrjp");
 
@@ -88,12 +88,13 @@ function Contact() {
             <form
               method="POST"
               onSubmit={handleClick}
+              aria-label={ariaForm}
               className="flex flex-col gap-4 w-full lg:max-w-sm"
             >
               {contentForm.map((item) => (
                 <div key={item.id} className="flex flex-col w-full">
                   <label
-                    htmlFor={item.label}
+                     htmlFor={item.name}
                     className="text-gray-700 font-bold py-2"
                   >
                     {item.label}

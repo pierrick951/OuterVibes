@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Disallow: /error
+
+
+Sitemap: https://outer-vibes.vercel.app/sitemap.xml

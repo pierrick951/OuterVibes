@@ -9,6 +9,10 @@ const contentFooter: string[] = [
        `© ${currentYear} Outer Vibes. Tous droits réservés`
 
 ];
+const pB:string = 'https://bento.me/etuve'
+const credit:string  = 'Created By Pierrick Bernard'
+
+
 const socialLinkContact: SocialeType = [
   {
     id: nanoid(),
@@ -46,6 +50,9 @@ function Footer() {
       </div>
       <div className="py-4 text-center font-mono text-gray-50 mx-auto">
         <p>{contentFooter[1]}</p>
+      <small className="text-zinc-950 text-center">
+        <a href={pB}>{credit}</a>
+      </small>
       </div>
     </div>
   );
