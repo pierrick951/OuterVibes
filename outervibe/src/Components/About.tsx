@@ -22,17 +22,17 @@ const Tabs: CardType = [
   {
     id: nanoid(),
     ico: <IoTimeOutline />,
-    text: "Gain de Temps et de Stress Réduit",
+    text: "Gain de Temps et Stress Réduit",
   },
   {
     id: nanoid(),
     ico: <MdOutlineTravelExplore />,
-    text: "Accès à des Connaissances et Expériences Locales",
+    text: "Accès à des connaissances et expériences locales",
   },
   {
     id: nanoid(),
     ico: <BsPersonVcard className="w-10" />,
-    text: "Personnalisation et Sur-Mesure",
+    text: "Personnalisation et voyage sur-mesure",
   },
 ];
 function About() {

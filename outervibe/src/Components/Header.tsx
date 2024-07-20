@@ -19,8 +19,8 @@ function Header() {
   const title: string = "Outer Vibes*";
   const tabs: NavType = [
     { id: nanoid(), text: "A Propos", link: "#about" },
-    { id: nanoid(), text: "Fonctionnement", link: "#" },
-    { id: nanoid(), text: "Formule", link: "#price" },
+    { id: nanoid(), text: "Fonctionnement", link: "#Fonctionnement" },
+    { id: nanoid(), text: "Formules", link: "#price" },
     { id: nanoid(), text: "Contact", link: "#contact" },
   ];
 

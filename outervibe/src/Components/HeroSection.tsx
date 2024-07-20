@@ -8,8 +8,9 @@ function HeroSection() {
   const TextHeroSection: string[] = [
     "Découvrir",
     "Votre aventure sur mesure, planifiée à la perfection",
-    "Parter a",
+    "Partez a",
     "L'aventure",
+    "#Fonctionnement"
   ];
 
   return (
@@ -27,12 +28,13 @@ function HeroSection() {
                 <span>{TextHeroSection[2]}</span>
                 <span className="text-red-500">{TextHeroSection[3]}</span>
               </h1>
-              <p className="text-white font-mono  text-md lg:text-lg xl:py-5">
+              <p className="text-white font-mono   text-md lg:text-lg xl:py-5 pb-2">
                 {TextHeroSection[1]}
               </p>
-              <button className="rounded-xl py-1 px-4  mt-2 lg:px-10 bg-red-600 hover:bg-red-500 font-medium  text-white">
+              <a  href={TextHeroSection[4]}
+              className="rounded-xl py-1 px-4   lg:px-10 bg-red-600 hover:bg-red-500 font-medium  text-white">
                 {TextHeroSection[0]}
-              </button>
+              </a>
             </div>
             <div className=" hidden md:flex w-full  flex-row justify-center p-2">
               <button className=" rounded-full bg-zinc-800/80 p-2 animate-bounce">
