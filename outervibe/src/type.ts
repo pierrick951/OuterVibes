@@ -28,7 +28,7 @@ export type cardPricesType = {
   id: string;
   text: string;
   title: string;
-  price:number;
+  price:string;
   tabs:string[];
 }[]
 

@@ -124,12 +124,12 @@ function Contact() {
                 className="py-2 px-3 border border-gray-300 rounded-2xl focus:outline-red-400 w-full"
                 rows={4}
               />
-              <div className="text-center py-4">
+              <div className="text-center py-4 w-full bg-red-500 hover:bg-red-300 rounded-xl">
                 <Toaster richColors />
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="bg-red-500 py-2 px-5 hover:bg-red-300 rounded-xl text-white font-bold"
+                  className="  text-white font-bold"
                 >
                   {buttonSubmit}
                 </button>

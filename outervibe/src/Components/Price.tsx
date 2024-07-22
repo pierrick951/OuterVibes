@@ -5,33 +5,42 @@ import { cardPricesType } from "../type";
 const cardPrices: cardPricesType = [
   {
     id: nanoid(),
-    text: "Eco",
-    title: "Reserver vous une pause a moindre coup",
-    price: 50,
+    text: "Petite Escapade",
+    title: "De 1 à 3 jours",
+    price: "145 €",
     tabs: [
-      "Evasion Rapide",
-      "City Break",
-      "Escapade Urbaine",
-      "Détente Express",
+      "Recherche Transport",
+      "Recherche de l'hébergement",
+      "Incontournable à faire sur place",
+      "Carnet de voyage au format numérique",
     ],
   },
   {
     id: nanoid(),
-    text: "Week end",
-    title: "En france ou en europe",
-    price: 40,
-    tabs: ["Voyage Économique", "Vacances Malines", "Aventure Low-Cost"],
+    text: "Escapade",
+    title: "De 4 a 10 jours ",
+    price: "40€/j",
+    tabs: [
+      "Recherche d'une destination",
+      "Recherche du transport ",
+      "Recherche hébergement",
+      "Trouver des activités",
+      "Carnet de voyage au format papier ou numérique",
+    ],
   },
   {
     id: nanoid(),
-    text: "Roadtrip",
-    title: "Road trip",
-    price: 50,
+    text: " Grande Escapade",
+    title: "Plus de 10 jours ",
+    price: "En fonction du voyage",
     tabs: [
-      "Aventure Routière",
-      "Route Panoramique",
-      "Escapade Urbaine",
-      "Tour des Régions",
+      "Recherche d'une ou de plusieurs destinations",
+      "Recherche du transport",
+      "Recherche hébergement",
+      "Trouver des activités",
+      "Carnet de voyage au format papier",
+      "Coffret surprise"
+
     ],
   },
 ];
@@ -43,7 +52,7 @@ function Price() {
         {cardPrices.map((item) => (
           <div
             key={item.id}
-            className=" p-2 rounded-2xl h-96 w-full sm:w-80 lg:w-96 shadow-2xl cursor-pointer  hover:animate-pulse bg-gradient-to-tr from-gray-50 to-zinc-100
+            className=" p-2 rounded-2xl h-auto w-full sm:w-80 lg:w-96 shadow-2xl cursor-pointer  hover:animate-pulse bg-gradient-to-tr from-gray-50 to-zinc-100
             "
           >
             <PriceCard
