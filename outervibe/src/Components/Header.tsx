@@ -24,13 +24,13 @@ function Header() {
     { id: nanoid(), text: "Contact", link: "#contact" },
   ];
 
-  const linkButtonNav: string = "https://www.instagram.com/";
+  const linkButtonNav: string = "https://www.instagram.com/outervibes.trvl/?__d=1%3Futm_source%3Dig_embed";
 
   const socialLink: SocialeType = [
     {
       id: nanoid(),
       element: <IoLogoInstagram color="#f1f1f1" className="w-5" />,
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/outervibes.trvl/?__d=1%3Futm_source%3Dig_embed",
     },
     {
       id: nanoid(),

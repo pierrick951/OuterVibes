@@ -22,10 +22,10 @@ function PriceCard({ text, title, price, tabs }: Props) {
         </div>
       </div>
       <div className=' flex flex-col justify-between  h-full'>
-        <ul className="flex flex-col px-5 w-full ">
+        <ul className="flex flex-col px-2 lg:px-5 w-full ">
           {tabs.map((tab, index) => (
         
-            <div key={index}  className='flex items-center gap-2 w-full my-2'>
+            <div key={index}  className='flex items-center gap-2 w-full my-2 '>
               <FaCheckCircle color='#3F3F46' className='w-[30px]' />
               <li className="flex flex-row font-normal text-xs md:text-lg  gap-2 py-2">
                 <span>{tab}</span>

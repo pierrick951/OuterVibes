@@ -42,7 +42,7 @@ const socialLinkContact: SocialeType = [
   {
     id: nanoid(),
     element: <IoLogoInstagram color="#1c1c1c" className="w-5" />,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/outervibes.trvl/?__d=1%3Futm_source%3Dig_embed",
   },
   {
     id: nanoid(),
@@ -76,7 +76,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className="px-5 lg:px-36 xl:px-40 w-full flex py-20 text-start flex-col justify-center items-center"
+      className="px-5 lg:px-36 xl:px-40 w-full flex  py-8 lg:py-10 text-start flex-col justify-center items-center"
     >
       <div className="bg-white rounded-xl shadow-lg p-6 mt-4 flex flex-col h-auto w-full max-w-6xl">
         <div className="text-center xl:text-start">
